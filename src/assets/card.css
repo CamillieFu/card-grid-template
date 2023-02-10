@@ -1,0 +1,63 @@
+.card-container {
+  padding: 56px;
+  display: grid;
+  gap: 50px;
+  justify-content: center;
+  grid-template-columns: 25vw 25vw 25vw;
+}
+
+.card {
+  padding: 24px;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+  border-radius: 8px;
+  background-color: #FAF9F6;
+  font-family: 'Nunito', sans-serif;
+}
+
+.card-img {
+  height: 250px;
+  width: 100%;
+  object-fit: cover;
+  margin-bottom: 8px;
+}
+
+.card p {
+  margin: 0px;
+}
+
+/* portrait only  */
+@media only screen and (max-width: 736px) and (hover: none) and (pointer: coarse) and (-webkit-min-device-pixel-ratio: 1) and (orientation: portrait) {
+
+  .card-container {
+    grid-template-columns: auto;
+    gap: 20px;
+  }
+}
+
+/* landscape only  */
+@media only screen and (min-width: 375px) and (max-width: 812px) and (hover: none) and (pointer: coarse) and (-webkit-min-device-pixel-ratio: 2) and (orientation: landscape) {
+
+  .card-container {
+    grid-template-columns: 35vw 35vw;
+    gap: 20px;
+  }
+
+  .card-img {
+    height: 200px;
+  }
+}
+
+/* desktop */
+@media (min-width: 600px) and (max-width: 900px) {
+  .card-container {
+    grid-template-columns: 35vw 35vw;
+    gap: 30px;
+  }
+}
+
+@media (max-width: 600px) {
+  .card-container {
+    grid-template-columns: auto;
+    gap: 20px;
+  }
+}
